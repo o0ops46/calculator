@@ -1,17 +1,11 @@
-"use strict!";
+'use strict!';
 //select elements.
-const clearBtn = document.querySelector(".clearBtn");
-const inputBox = document.querySelector(".box1");
-const numberOne = document.querySelector(".one");
-const numberTwo = document.querySelector(".two");
-const numberThree = document.querySelector(".three");
-const numberFour = document.querySelector(".four");
-const numberFive = document.querySelector(".five");
-const numberSix = document.querySelector(".six");
-const numberSeven = document.querySelector(".seven");
-const numberEight = document.querySelector(".eight");
-const numberNine = document.querySelector(".nine");
-
+const clearBtn = document.querySelector('.clearBtn');
+let inputBox = document.querySelector('.box1');
+const numbers = document.querySelectorAll('.number');
+const operatorsEl = document.querySelectorAll('.operator');
+const equalsEl = document.querySelector('.equals');
+let displayValue = '';
 const add = (a, b) => {
   return a + b;
 };
@@ -24,3 +18,17 @@ const multiply = (a, b) => {
 const divide = (a, b) => {
   return a / b;
 };
+clearBtn.addEventListener('click', function () {
+  inputBox.textContent = 0;
+});
+numbers.forEach((num) => {
+  num.addEventListener('click', function () {
+    if (inputBox.textContent <= 0) {
+      inputBox.textContent = num.textContent;
+      displayValue = inputBox.textContent;
+    } else {
+      inputBox.textContent += num.textContent;
+      displayValue = inputBox.textContent;
+    }
+  });
+});
