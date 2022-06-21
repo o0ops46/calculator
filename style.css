@@ -143,10 +143,26 @@ table {
 }
 .box1 {
   grid-area: 1 / 1 / 2 / 5;
-  background-color: silver;
+  background-color: #424242;
   border: 1px solid grey;
-  font-size: 26px;
+  font-size: 36px;
+  color: white;
 }
 .box2 {
   grid-area: 6/1/6/3;
+}
+.multiply {
+  background-color: orange;
+}
+.divide {
+  background-color: orange;
+}
+.minus {
+  background-color: orange;
+}
+.plus {
+  background-color: orange;
+}
+.equals {
+  background-color: orange;
 }
